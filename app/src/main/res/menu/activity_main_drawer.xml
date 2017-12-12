@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_today"
+            android:icon="@drawable/ic_menu_inbox"
+            android:title="Hoy" />
+        <item
+            android:id="@+id/nav_tomorrow"
+            android:icon="@drawable/ic_menu_today"
+            android:title="Mañana" />
+    </group>
+
+
+
+    <item android:title="Otras opciones">
+        <menu>
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_menu_account"
+                android:title="Cuenta" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Ajustes" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Cerrar Sesión" />
+        </menu>
+
+    </item>
+
+</menu>

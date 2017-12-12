@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Principal Colors -->
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#03A9F4</color>
+    
+    <!-- Login Activity -->
+    <color name="colorLoginActivityBackground">#FFFFFF</color>
+    <color name="colorLoginActivityInputsText">#555555</color>
+    <color name="colorLoginActivityLoginButtonText">#FFFFFF</color>
+    <color name="colorLoginActivityLoginFooterText">#F44336</color>
+    <color name="colorLoginActivityLoginButtonPressed">#AFF44336</color>
+
+    <!-- SignUp Activity -->
+    <color name="colorSignupActivityBackground">#FFFFFF</color>
+    <color name="colorSignupActivityInputsText">#555555</color>
+    <color name="colorSignupActivitySignupButtonText">#FFFFFF</color>
+    <color name="colorSignupActivitySignupFooterText">#F44336</color>
+    <color name="colorSignupActivitySignupButtonPressed">#AFF44336</color>
+
+    <!-- Main Activity -->
+</resources>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">MyTime</string>
+    <string name="action_settings">Settings</string>
+    <string name="icon_app_content_description">MyTime</string>
+
+    <!-- Login Activity -->
+    <string name="login_activity_hint_email">Correo Electrónico</string>
+    <string name="login_activity_hint_password">Contraseña</string>
+    <string name="login_activity_text_login_button">Iniciar Sesión</string>
+    <string name="login_activity_text_signup_button">REGÍSTRATE</string>
+    <string name="login_activity_text_question_account">¿No tienes una cuenta?</string>
+    <string name="failed_login_message">Verifique sus datos e intente nuevamente</string>
+    <string name="login_activity_message_empty_email_input">Escribe tu correo electrónico</string>
+    <string name="login_activity_message_empty_password_input">Escribe tu contraseña</string>
+    <string name="login_activity_message_loading_login">Iniciando Sesión</string>
+
+    <!-- SignUp Activity -->
+    <string name="signup_activity_hint_email">Correo Electrónico</string>
+    <string name="signup_activity_hint_password">Contraseña</string>
+    <string name="signup_activity_text_signup_button">Registrarse</string>
+    <string name="signup_activity_text_login_button">INICIA SESIÓN</string>
+    <string name="signup_activity_text_question_account">¿No tienes una cuenta?</string>
+    <string name="failed_signup_message">Error al crear su cuenta de usuario</string>
+    <string name="signup_activity_message_empty_email_input">Escribe tu correo electrónico</string>
+    <string name="signup_activity_message_empty_password_input">Escribe tu contraseña</string>
+    <string name="signup_activity_message_loading_signup">Creando cuenta de usuario</string>
+
+
+    <!-- Main Activity -->
+    <string name="title_activity_main">MyTime</string>
+    <string name="activity_main_message_logout">Cerrando sesión</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

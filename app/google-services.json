@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1053349911947",
+    "firebase_url": "https://mytime-android-app.firebaseio.com",
+    "project_id": "mytime-android-app",
+    "storage_bucket": "mytime-android-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053349911947:android:205dc3b56a3b21a2",
+        "android_client_info": {
+          "package_name": "com.example.developer.mytime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053349911947-3deh8mdvq1dsmjverjqmstrp0qbbs8uv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.developer.mytime",
+            "certificate_hash": "8381a584cbc6879dbd32d4dc774582fae4d833a8"
+          }
+        },
+        {
+          "client_id": "1053349911947-tkuu5bsnf3m745vn0fou6f4d70up177a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjJxo_I4beJJAB3IUjpczk88UNZXgJHfU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053349911947-tkuu5bsnf3m745vn0fou6f4d70up177a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
