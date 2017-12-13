@@ -30,5 +30,6 @@ public class AddTaskActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("tasks");
 
         myRef.child("title").push().setValue("Task title");
+        
     }
 }
