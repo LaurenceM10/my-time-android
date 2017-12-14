@@ -36,4 +36,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- AddTaskActivity -->
+    <string name="add_task_activity_hint_title_text">Título</string>
+    <string name="add_task_activity_hint_description_text">Descripción</string>
+    <string name="add_task_activity_button_create_task_text">Añadir tarea</string>
+
+    <string name="add_task_activity_message_empty_title_input">Escribe tu correo electrónico</string>
+    <string name="add_task_activity_message_empty_description_input">Escribe tu contraseña</string>
+
 </resources>

@@ -27,7 +27,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.AccountActivity" />
         <activity android:name=".activities.SettingsActivity" />
-        <activity android:name=".activities.AddTaskActivity"></activity>
+        <activity android:name=".activities.AddTaskActivity" />
     </application>
 
 </manifest>
