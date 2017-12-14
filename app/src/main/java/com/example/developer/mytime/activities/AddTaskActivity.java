@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,6 +18,9 @@ import com.google.firebase.database.FirebaseDatabase;
 public class AddTaskActivity extends AppCompatActivity {
     private EditText title;
     private EditText description;
+    private Button create;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,16 @@ public class AddTaskActivity extends AppCompatActivity {
         //Call the necessary methods
         initFirebaseDatabase();
         initViews();
+        initActions();
+    }
+
+
+    /**
+     * To init Firebase Real Time Database
+     */
+    private void initFirebaseDatabase(){
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
     }
 
 
@@ -35,6 +50,7 @@ public class AddTaskActivity extends AppCompatActivity {
     private void initViews(){
         title = findViewById(R.id.title);
         description = findViewById(R.id.description);
+        create = findViewById(R.id.create);
     }
 
 
@@ -42,7 +58,14 @@ public class AddTaskActivity extends AppCompatActivity {
      * To init actions of some elements in the view
      */
     private void initActions(){
-
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (validateEmptyInputs()){
+                      createTask();
+                }
+            }
+        });
     }
 
 
@@ -52,11 +75,11 @@ public class AddTaskActivity extends AppCompatActivity {
     private boolean validateEmptyInputs(){
         if(title.getText().toString().isEmpty()){
             //Show a message is the email input is empty
-            Toast.makeText(getApplicationContext(), R.string.login_activity_message_empty_email_input, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.add_task_activity_message_empty_title_input, Toast.LENGTH_SHORT).show();
             return false;
         } else if(description.getText().toString().isEmpty()) {
             //Show a message is the password input is empty
-            Toast.makeText(getApplicationContext(), R.string.login_activity_message_empty_password_input, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.add_task_activity_message_empty_description_input, Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -65,10 +88,12 @@ public class AddTaskActivity extends AppCompatActivity {
 
 
     /**
-     * To init Firebase Real Time Database
+     * To create and save a task in Firebase RealTime Database
      */
-    private void initFirebaseDatabase(){
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
+    private void createTask(){
+        databaseReference.child("users").child("tasks/title").push().setValue(title.getText().toString());
+        databaseReference.child("users").child("tasks/description").push().setValue(description.getText().toString());
     }
+
+
 }

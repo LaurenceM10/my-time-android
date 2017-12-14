@@ -41,7 +41,7 @@
     <string name="add_task_activity_hint_description_text">Descripción</string>
     <string name="add_task_activity_button_create_task_text">Añadir tarea</string>
 
-    <string name="add_task_activity_message_empty_title_input">Escribe tu correo electrónico</string>
-    <string name="add_task_activity_message_empty_description_input">Escribe tu contraseña</string>
+    <string name="add_task_activity_message_empty_title_input">Escribe el título</string>
+    <string name="add_task_activity_message_empty_description_input">Escribe la descripción</string>
 
 </resources>

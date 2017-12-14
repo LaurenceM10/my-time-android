@@ -54,7 +54,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/create_task"
+                android:id="@+id/create"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/login_activity_login_button_margin"
