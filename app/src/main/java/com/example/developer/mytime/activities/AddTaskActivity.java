@@ -89,6 +89,8 @@ public class AddTaskActivity extends AppCompatActivity {
 
     /**
      * To create and save a task in Firebase RealTime Database
+     *
+     * This way to write with user rules in Firebase Database
      */
     private void createTask(){
         databaseReference.child("users").child("tasks/title").push().setValue(title.getText().toString());

@@ -43,5 +43,4 @@
 
     <string name="add_task_activity_message_empty_title_input">Escribe el título</string>
     <string name="add_task_activity_message_empty_description_input">Escribe la descripción</string>
-
 </resources>

@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Fragment fragment = null;
+
         Class fragmentClass = null;
 
         if (id == R.id.nav_home) {
@@ -181,11 +181,8 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-        /*
-        * Call to the method in charge of replacing the fragment.
-        * The second parameter allways is null, there's no problem
-        */
-        replaceFragment(fragmentClass, fragment);
+        //Call to the method in charge of replacing the fragment.
+        replaceFragment(fragmentClass);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -197,19 +194,20 @@ public class MainActivity extends AppCompatActivity
      * To replace and display the corresponding fragment
      *
      * @param fragmentClass
-     * @param fragment
      */
-    private void replaceFragment(Class fragmentClass, Fragment fragment){
-        /**
+    private void replaceFragment(Class fragmentClass){
+        Fragment fragment = null;
+
+        /*
          * Here we replace the fragments. These will be hosted in a FrameLayout
          * that is inside the content_main (layout).
          */
         try {
-            //can be null
+            //could be null
             assert fragmentClass != null;
             fragment = (Fragment) fragmentClass.newInstance();
 
-            // Insert the fragment by replacing any existing fragment
+            //Insert the fragment by replacing any existing fragment
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
         } catch (Exception e) {
@@ -241,7 +239,7 @@ public class MainActivity extends AppCompatActivity
         mAuth.signOut();
 
         //To show a progress dialog
-        showLoadingProgressDialog();
+        showProgressDialog();
 
         //To get the current user and update the UI if the current user is null
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -252,7 +250,7 @@ public class MainActivity extends AppCompatActivity
     /**
      * To show a login message progress dialog
      */
-    private void showLoadingProgressDialog(){
+    private void showProgressDialog(){
         //To set a message and show a progress dialog
         progressDialog.setMessage(getString(R.string.activity_main_message_logout));
         progressDialog.setCancelable(false);
